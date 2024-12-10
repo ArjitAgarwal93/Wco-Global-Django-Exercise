@@ -6,9 +6,8 @@ This project is a simple Django-based application for managing a global network'
 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Prerequisites](#prerequisites)
+- [Clone The Repository](#clone-repo)
 
 ## Technologies Used
 
@@ -52,3 +51,4 @@ Now, navigate to http://127.0.0.1:8000/ in your browser.
 To run Django Management Command to Import Blog Posts from CSV
 
 python manage.py import_blog_posts data/blog_posts.csv
+
