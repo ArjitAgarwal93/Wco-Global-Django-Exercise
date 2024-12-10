@@ -1,6 +1,6 @@
 # WCO Global - Django Exercise
 
-This project is a simple Django-based application for managing a global network's content operations. It includes features like pagination, user filtering, and content management.
+This project is a simple Django-based application. It includes features like user filtering, and content management.
 
 ## Table of Contents
 
@@ -52,3 +52,11 @@ To run Django Management Command to Import Blog Posts from CSV
 
 python manage.py import_blog_posts data/blog_posts.csv
 
+```
+### Screenshots
+![Screenshot (32)](https://github.com/user-attachments/assets/ae060af3-cb22-4f45-aee3-a2bfbba4fab9)
+
+![Screenshot (33)](https://github.com/user-attachments/assets/52a768fa-f2ae-428a-85a8-21c01f96cc03)
+![Screenshot (34)](https://github.com/user-attachments/assets/76daa5fd-04fa-4e10-88be-cefea1a89a24)
+
+    
