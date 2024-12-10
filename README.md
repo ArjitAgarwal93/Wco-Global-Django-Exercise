@@ -1,113 +1,54 @@
-# Django Developer Task
+# WCO Global - Django Exercise
 
-## Objective
+This project is a simple Django-based application for managing a global network's content operations. It includes features like pagination, user filtering, and content management.
 
-We are looking for an experienced Django developer who can complete the following tasks efficiently. The goal is to demonstrate your ability to work with Django, integrate APIs, write management commands, and implement frontend JavaScript functionality.
+## Table of Contents
 
-## Tasks
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-### 1. **Detect User's Country Based on IP Address (Backend)**
-   - **Description**:  
-     Create a function that detects the user's country based on their IP address. Use an external API (such as ip-api or ipify) to get the country information.
-   
-   - **Expected Outcome**:  
-     - The country of the user is detected based on their IP.  
-     - The function is integrated into a Django view and passed to the template as context.  
-   
-   - **Time Estimate**: 3-5 minutes
+## Technologies Used
 
-### 2. **Create a Django Management Command to Import Blog Posts from CSV (Backend)**
-   - **Description**:  
-     Create a management command that will read blog posts from a CSV file (available in data/blog_posts.csv) and import them into the Django database. Each blog post should have:
-     - Title
-     - Content
-     - Country (optional field)
-     
-     The CSV file will have these columns:
-     ```
-     title, content, country
-     ```
+- Django 4.x
+- Python 3.x
+- SQLite (or your preferred database)
+- HTML/CSS
+- JavaScript (for frontend interactivity)
 
-   - **Expected Outcome**:  
-     - The management command successfully reads the CSV file and imports the blog posts.  
-     - You should also handle basic error checks, such as ensuring required fields are present in the CSV.
+## Installation
 
-   - **Time Estimate**: 5-7 minutes
+### Prerequisites
 
-### 3. **Frontend: Filter Blog Posts by Country Using JavaScript (Frontend)**
-   - **Description**:  
-     Implement a simple slider or toggle that allows the user to dynamically filter the blog posts displayed on the frontend based on the detected country.
-   
-   - **Expected Outcome**:  
-     - The page should show all blog posts by default.  
-     - When a country is detected, only the posts from that country should be shown.  
-     - The filtering should happen dynamically without refreshing the page.
+Ensure that Python 3.x and pip are installed on your system.
 
-   - **Time Estimate**: 5-7 minutes
+### Clone the repository
 
-### 4. **Optional Task: Styling and Enhancements (Frontend)**
-   - **Description**:  
-     Make the blog page visually appealing and modern. You can use CSS frameworks like Bootstrap or Tailwind CSS, or create your own custom styles.
-   
-   - **Expected Outcome**:  
-     - Apply a modern, clean design for the blog posts.  
-     - The filter slider or toggle should have a visually appealing UI.  
-     - Ensure the design is responsive and mobile-friendly.
-
-   - **Bonus Points**:  
-     - Make the design interactive, such as adding hover effects or animations to the posts or slider.  
-     - Add a minimalistic card layout for blog posts with images or icons.
-
-## Screenshots
-
-Here are the screenshots showing how the functionalities should look:
-
-- **Sample Data: Blog Posts Data in csv**  
-   ![Sample Data](screenshots/sample_data.png)
-
-- **Output 1: Enhanced Blog Post List View (Frontend Improvements)**  
-   ![Output 1](screenshots/output_1.png)
-
-- **Output 2: Blog Post with Pagination**  
-   ![Output 2](screenshots/output_2.png)
-
-- **Output 3: Blog Posts Page (Country-Based Filter)**  
-   ![Output 3](screenshots/output_3.png)
+```bash
+git clone https://github.com/ArjitAgarwal93/Wco-Global-Django-Exercise.git
+cd Wco-Global-Django-Exercise
 
 
-## Deliverables
+Install dependencies
+Use the following command to install all necessary dependencies:
 
-### Backend Tasks:
-- The function to detect the user's country and integrate it into a Django view.
-- A management command to import blog posts from a CSV file.
+pip install -r requirements.txt
 
-### Frontend Task:
-- A dynamic slider or toggle to filter posts by country.
+Database setup
+Run the following command to apply migrations and set up the database:
 
-### Optional Task:
-- Styling and enhancing the blog page to make it modern and visually appealing.
+python manage.py migrate
+Run the server
 
-## How to Submit:
 
-1. **Create a GitHub Repository**:  
-   - Create a GitHub repository containing your code. Ensure that the repository has a README.md file explaining the setup and how to run the project. Include any necessary requirements in the `requirements.txt` file.
+To start the Django development server, use:
 
-2. **Upload the Code**:  
-   - Upload your code and commit your changes regularly. We prefer clean, readable code with comments where necessary.
+python manage.py runserver
+Now, navigate to http://127.0.0.1:8000/ in your browser.
 
-3. **Demonstrate the Functionality**:  
-   - Provide a brief walkthrough of your solution. You can create a short demo or include screenshots of the result.
 
-## Evaluation Criteria:
+To run Django Management Command to Import Blog Posts from CSV
 
-- **Code Quality**: Clean, readable, and well-structured code.
-- **Efficiency**: How well you have structured your code and your ability to solve the tasks within the estimated time.
-- **Problem Solving**: Ability to handle third-party integrations, error handling, and edge cases.
-- **UI/UX**: How modern and responsive your frontend design looks.
-- **Bonus**: If you implement the optional task, bonus points will be given for creativity and responsiveness.
-
-## Time Estimate for the Task:
-- **Main Tasks**: 10-15 minutes.
-- **Optional Task**: 5-10 minutes for styling and enhancements.
-
-Good luck!
+python manage.py import_blog_posts data/blog_posts.csv
